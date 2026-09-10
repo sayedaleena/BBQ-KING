@@ -1,0 +1,128 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+body { background: #fff; color: #333; }
+
+nav { 
+  background: #C00000; 
+  color: #fff; 
+  padding: 15px 20px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  position: sticky; /* YE ADD KARO */
+  top: 0; /* YE ADD KARO */
+  z-index: 10000; /* YE ADD KARO */
+}
+nav h2 { color: #FFD700; }
+nav ul { list-style: none; display: flex; gap: 25px; }
+nav a { color: #fff; text-decoration: none; font-weight: bold; }
+.menu-icon { display: none; font-size: 24px; cursor: pointer; }
+
+.hero { background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1') center/cover; height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
+.hero-text h1 { font-size: 60px; color: #FFD700; text-shadow: 3px 3px 6px #000; }
+.hero-text .timing { color: #FFD700; font-weight: bold; margin: 10px 0; }
+.btn-red { background: #C00000; color: #fff; padding: 14px 30px; border-radius: 8px; text-decoration: none; display: inline-block; margin-top: 15px; border: 2px solid #fff; }
+/* HOMEPAGE ORDER NOW BUTTON - ZOOM EFFECT */
+.btn-hero {
+  background: #FFD700; /* Golden color - BBQ King theme */
+  color: #C00000; /* Red text */
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px; /* Gol gol button */
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+  transition: all 0.2s ease; /* Smooth zoom */
+  border: 2px solid #FFD700;
+}
+
+.btn-hero:hover {
+  transform: scale(1.08); /* Hover pe zoom */
+  background: #FFC700;
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+}
+
+.btn-hero:active {
+  transform: scale(0.90); /* Click pe dab jaye */
+  background: #C00000;
+  color: #fff;
+}
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; padding: 30px; }
+.menu-card { background: #fff; border: 2px solid #C00000; border-radius: 12px; padding: 15px; text-align: center; transition: 0.3s; }
+.menu-card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(192,0,0,0.3); }
+.menu-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+.btn-order { background: #C00000; color: #fff; padding: 10px; border-radius: 5px; text-decoration: none; display: block; margin-top: 10px; font-weight: bold; }
+.cat-title { color: #C00000; text-align: center; margin: 30px 0 10px; font-size: 28px; }
+
+.reviews, .about, .contact { padding: 50px 20px; text-align: center; }
+.review-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.review-box { background: #f9f9f9; border-left: 5px solid #C00000; padding: 20px; max-width: 300px; border-radius: 5px; }
+
+
+
+.whatsapp-float img { width: 35px;
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px;  
+  width: 65px;
+  height: 65px;
+  z-index: 999;
+ 
+}
+/* ========== MOBILE RESPONSIVE - FINAL FIX ========== */
+@media(max-width: 768px){
+  
+  /* HEADER FIX */
+  nav {
+    padding: 12px 15px;
+    position: sticky; /* header upar chipka rahe */
+    top: 0;
+    z-index: 10000; /* sab se upar laane ke liye */
+  }
+  nav h2 { font-size: 18px; }
+  
+  /* HAMBURGER MENU */
+  .menu-icon { 
+    display: block; /* 3 line wala icon dikhao */
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  /* MENU LIST HIDE */
+  nav ul { 
+    display: none; /* pehle chupao */
+    flex-direction: column; 
+    background: #C00000; 
+    position: absolute; 
+    top: 55px; /* header ke bilkul neeche */
+    left: 0; 
+    width: 100%; 
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  nav ul.show { display: flex; } /* click pe show ho */
+  nav ul li { text-align: center; padding: 12px 0; }
+  
+  /* HERO TEXT CHOTA KARO MOBILE ME */
+  .hero-text h1 { font-size: 28px; }
+  .hero-text p { font-size: 14px; }
+  
+  /* BUTTONS CHOTE KARO */
+  .btn-hero { padding: 12px 25px; font-size: 16px; }
+  
+  /* WHATSAPP BUTTON CHOTA */
+  .whatsapp { width: 55px; height: 55px; bottom: 20px; right: 20px; }
+  .whatsapp img { width: 30px; height: 30px; }
+}
+.btn-order:active {
+  transform: scale(0.90);
+  background: #8B0000;
+}
+
+
+
+.btn-order:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(192,0,0,0.4);
+}

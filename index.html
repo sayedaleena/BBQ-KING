@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBQ King 👑 - Hyderabad's #1 BBQ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+
+<nav>
+  <h2>BBQ KING 👑</h2>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <ul id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-text">
+    <h1>BBQ KING 👑</h1>
+    <p>Taste That Talks | Hyderabad ka Famous BBQ</p>
+    <p class="timing">Open Till 3 AM | Home Delivery</p>
+    <a href="menu.html" class="btn-hero">Order Now</a>
+  </div>
+</header>
+
+<section class="reviews">
+  <h2>What Our Customers Say ⭐</h2>
+  <div class="review-container">
+    <div class="review-box">
+      <p>"Best Chicken Tikka in Hyderabad! Cheese pull was amazing"</p>
+      <span>- Ahmed Raza</span>
+    </div>
+    <div class="review-box">
+      <p>"3 AM pe bhi delivery mil gayi. 10/10 service"</p>
+      <span>- Sana K.</span>
+    </div>
+    <div class="review-box">
+      <p>"Family ke liye perfect place. Clean and hygienic"</p>
+      <span>- Usman Ali</span>
+    </div>
+  </div>
+</section>
+
+
+<a href="https://wa.me/923211076483" class="whatsapp-float" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></a>
+
+<script src="script.js"></script>
+<script>
+  function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("show");
+  }
+</script>
+</body>
+</html>
